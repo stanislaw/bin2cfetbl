@@ -8,4 +8,7 @@ add_executable(elf2cfetbl elf2cfetbl.c)
 
 install(TARGETS elf2cfetbl DESTINATION host)
 
-
+set_target_properties(elf2cfetbl
+  PROPERTIES
+  RUNTIME_OUTPUT_DIRECTORY "${MISSION_BINARY_DIR}/bin"
+)
